@@ -22,12 +22,24 @@ class UserPayload
 
     /**
      * @param $accids 用户账号，json格式 最多查询200
+     * @return json
      */
     public function getInfo($accids){
         $url = Constant::BASE_API.Constant::USER_GET_INFO_ACTION;
         $data['accids'] = $accids;
         $result = Http::post($url,$data,$this->api->header);
-	return $result;
+	    return $result;
+    }
+
+
+    /**
+     * @param $data
+     * @return string
+     */
+    public function updateInfo($data){
+        $url = Constant::BASE_API.Constant::USER_UPDATE_INFO_ACTION;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
     }
 
 }
