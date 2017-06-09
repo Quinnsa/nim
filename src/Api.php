@@ -22,6 +22,8 @@ class Api
     {
         $this->appKey = $appKey;
         $this->appSecret = $appSecret;
+        $this->makeCheckSum();
+	$this->makeRequestHeader();
     }
 
     public function makeCheckSum(){

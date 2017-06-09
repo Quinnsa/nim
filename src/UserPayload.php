@@ -27,6 +27,7 @@ class UserPayload
         $url = Constant::BASE_API.Constant::USER_GET_INFO_ACTION;
         $data['accids'] = $accids;
         $result = Http::post($url,$data,$this->api->header);
+	return $result;
     }
 
 }
