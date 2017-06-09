@@ -18,7 +18,7 @@ class Constant
     const USER_BLOCK_ACTION = 'user/block.action';
     const USER_UNBLOCK_ACTION = 'user/unblock.action';
     const USER_UPDATE_INFO_ACTION = 'user/updateUinfo.action';
-    const USER_GET_INFO_ACTION = 'user/getUinfos';
+    const USER_GET_INFO_ACTION = 'user/getUinfos.action';
 
     const MSG_SEND_ACTION = 'msg/sendMsg.action';
     const MSG_SEND_BATCH_MSG_ACTION = 'msg/sendBatchMsg.action';

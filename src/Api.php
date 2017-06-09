@@ -16,7 +16,7 @@ class Api
     private $nonce;
     private $curTime;
     private $checkSum;
-    private $header;
+    public  $header;
 
     public function __construct($appKey,$appSecret)
     {
