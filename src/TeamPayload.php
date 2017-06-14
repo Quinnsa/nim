@@ -31,4 +31,32 @@ class TeamPayload
 	    return $result;
     }
 
+    /**
+     * 用户主动退群
+     * @param $data
+     * @return string
+     */
+    public function leave($data){
+        $url = Constant::BASE_API.Constant::TEAM_USER_LEAVE;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
+    }
+
+    /**
+     * 群信息更新
+     * @param $data
+     * @return string
+     */
+    public function update($data){
+        $url = Constant::BASE_API.Constant::TEAM_UPDATE_ACTION;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
+    }
+
+    public function query($data){
+        $url = Constant::BASE_API.Constant::TEAM_QUERY_ACTION;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
+    }
+
 }
