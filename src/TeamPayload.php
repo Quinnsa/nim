@@ -59,4 +59,10 @@ class TeamPayload
         return $result;
     }
 
+    public function addUser($data){
+        $url = Constant::BASE_API.Constant::TEAM_ADD_USER_ACTION;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
+    }
+
 }
