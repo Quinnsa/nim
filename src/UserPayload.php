@@ -42,4 +42,10 @@ class UserPayload
         return $result;
     }
 
+    public function create($data){
+        $url = Constant::BASE_API.Constant::USER_CREATE_ACTION;
+        $result = Http::post($url,$data,$this->api->header);
+        return $result;
+    }
+
 }
